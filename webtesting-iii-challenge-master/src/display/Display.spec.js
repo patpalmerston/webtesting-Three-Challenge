@@ -49,4 +49,15 @@ describe('red-led class tests on true', () => {
 	});
 });
 
+describe('green-led class tests on false', () => {
+	it('green-led on locked false', () => {
+		const { container } = render(<Display locked={false} />);
+		expect(container.querySelector('led green-led'))
+	})
+
+	it('green-led on closed false', () => {
+		const { container } = render(<Display closed={true} />);
+		expect(container.querySelector('led green-led'))
+	})
+})
 
