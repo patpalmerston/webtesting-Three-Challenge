@@ -16,3 +16,20 @@ exports[`DashBoard SnapShot should match Display SnapShot 1`] = `
   </div>
 </div>
 `;
+
+exports[`Display SnapShot should match Display SnapShot 1`] = `
+<div
+  className="display panel"
+>
+  <div
+    className="led green-led"
+  >
+    Unlocked
+  </div>
+  <div
+    className="led green-led"
+  >
+    Open
+  </div>
+</div>
+`;
