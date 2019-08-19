@@ -26,16 +26,19 @@ describe('button text change on toggle', () => {
 	it('Display Open Gate on Closed gate click', () => {
 		const { getByText } = render(<Dashboard />);
 		const closeGateText = getByText('Close Gate');
-		const expected = 'Open Gate'
+		const expected = 'Open Gate';
 		fireEvent.click(closeGateText);
 		expect(closeGateText.textContent).toBe(expected);
 	});
 
 	it('Display Unlock Gate on Lock Gate Click', () => {
 		const { getByText } = render(<Dashboard />);
+		const closeGateText = getByText('Close Gate');
 		const lockGateText = getByText('Lock Gate');
-		const expected = 'Unlock Gate'
+		const expected = 'Unlock Gate';
+		fireEvent.click(closeGateText);
 		fireEvent.click(lockGateText);
+
 		expect(lockGateText.textContent).toBe(expected);
-	})
+	});
 });
